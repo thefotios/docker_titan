@@ -8,7 +8,7 @@
 #         - cassandra
 #         - elasticsearch
 cassandra:
-    build: docker/cassandra
+    image: spotify/cassandra
     volumes:
         - ./data/cassandra:/var/lib/cassandra
 # elasticsearch:
