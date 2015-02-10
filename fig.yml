@@ -1,12 +1,12 @@
-# titan:
-#     image: apobbati/titan-rexster
-#     ports:
-#         - "8182:8182"
-#         - "8183:8183"
-#         - "8184:8184"
-#     links:
-#         - cassandra
-#         - elasticsearch
+titan:
+    image: apobbati/titan-rexster
+    ports:
+        - "8182:8182"
+        - "8183:8183"
+        - "8184:8184"
+    links:
+        - cassandra
+        - elasticsearch
 cassandra:
     image: spotify/cassandra
     volumes:
