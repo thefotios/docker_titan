@@ -11,5 +11,11 @@ cassandra:
     image: spotify/cassandra
     volumes:
         - ./data/cassandra:/var/lib/cassandra
-# elasticsearch:
-#     image: dockerfile/elasticsearch
+elasticsearch:
+    image: dockerfile/elasticsearch
+    volumes:
+        - ./data/elasticsearch:/data
+    ports:
+        - "9200:9200"
+        - "9300:9300"
+    command: /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
