@@ -1,0 +1,15 @@
+# titan:
+#     image: apobbati/titan-rexster
+#     ports:
+#         - "8182:8182"
+#         - "8183:8183"
+#         - "8184:8184"
+#     links:
+#         - cassandra
+#         - elasticsearch
+cassandra:
+    build: docker/cassandra
+    volumes:
+        - ./data/cassandra:/var/lib/cassandra
+# elasticsearch:
+#     image: dockerfile/elasticsearch
